@@ -1,0 +1,9 @@
+PREFIX core: <https://www.symbiote-h2020.eu/ontology/core#>
+PREFIX plA: <http://www.example.com/ontology/platformA>
+PREFIX plB: <http://www.example.com/ontology/platformB>		
+
+SELECT ?description ?color WHERE {
+	?sensor a core:Sensor ;
+			core:description ?description ;
+			plA:hasColor ?color .
+} 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#">
+
+  <rdf:Description rdf:about="http://example.com/mappings/plA-plB">
+    <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Alignment"/>
+    <ns0:xml>yes</ns0:xml>
+    <ns0:level>2EDOAL</ns0:level>
+    <ns0:type>**</ns0:type>
+    <ns0:onto1>
+      <ns0:Ontology rdf:about="http://www.example.com/ontology/platformA">
+        <ns0:formalism>
+          <ns0:Formalism>
+            <ns0:uri>http://www.w3.org/TR/owl-guide/</ns0:uri>
+            <ns0:name>owl</ns0:name>
+          </ns0:Formalism>
+        </ns0:formalism>
+
+      </ns0:Ontology>
+    </ns0:onto1>
+
+    <ns0:onto2>
+      <ns0:Ontology rdf:about="http://www.example.com/ontology/platformB">
+        <ns0:formalism>
+          <ns0:Formalism>
+            <ns0:uri>http://www.w3.org/TR/owl-guide/</ns0:uri>
+            <ns0:name>owl</ns0:name>
+          </ns0:Formalism>
+        </ns0:formalism>
+
+      </ns0:Ontology>
+    </ns0:onto2>
+
+    <ns0:map>
+      <ns0:Cell>
+        <ns0:measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ns0:measure>
+        <ns0:relation>Equivalence</ns0:relation>
+        <ns0:entity1 rdf:resource="http://www.example.com/ontology/platformA/hasColor"/>
+        <ns0:entity2 rdf:resource="http://www.example.com/ontology/platformB/colour"/>
+      </ns0:Cell>
+    </ns0:map>
+
+  </rdf:Description>
+
+</rdf:RDF>

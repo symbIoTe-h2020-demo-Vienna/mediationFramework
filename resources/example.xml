@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<!-- JE2010: With the "#" in the end, this is parsed (by the RDF parser...)
+    without it, this is not! -->
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" 
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+		xml:base="http://www.example.com/mappings/plA-plB"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	 
+         xmlns:edoal="http://ns.inria.org/edoal/1.0/#"
+		 xmlns:plA="http://www.example.com/ontology/platformA/"
+		 xmlns:plB="http://www.example.com/ontology/platformB/">
+  
+  <Alignment rdf:about="http://oms.omwg.org/wine-vin/"> 
+    <xml>yes</xml>        
+    <level>2EDOAL</level>
+    <type>**</type>    
+    <onto1>
+      <Ontology rdf:about="http://www.example.com/ontology/platformA">
+      <formalism>
+		<Formalism>
+			<uri>http://www.w3.org/TR/owl-guide/</uri>
+			<name>owl</name>
+		</Formalism>
+      </formalism>
+      </Ontology>
+    </onto1> 
+    <onto2>
+      <Ontology rdf:about="http://www.example.com/ontology/platformB">
+      <formalism>
+		<Formalism>
+			<uri>http://www.w3.org/TR/owl-guide/</uri>
+			<name>owl</name>
+		</Formalism>
+      </formalism>
+      </Ontology>
+    </onto2>
+    <map>
+      <Cell>
+	    <entity1><edoal:Relation rdf:about="http://www.example.com/ontology/platformA/hasColor"/></entity1>
+        <entity2><edoal:Relation rdf:about="http://www.example.com/ontology/platformB/colour"/></entity2>
+        <measure rdf:datatype="&xsd;float">1.0</measure>
+        <relation>Equivalence</relation>
+      </Cell>
+    </map>
+   
+   
+  </Alignment>
+ </rdf:RDF>

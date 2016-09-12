@@ -1,0 +1,36 @@
+@prefix : <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix plA: <http://www.example.com/ontology/platformA/> .
+@prefix plB: <http://www.example.com/ontology/platformB/> .
+
+
+<http://example.com/mappings/plA-plB>
+	a :Alignment ;
+	:xml "yes" ;    
+    :level "0" ;
+	:type "**" ;    
+    :onto1 <http://www.example.com/ontology/platformA> ;
+    :onto2 <http://www.example.com/ontology/platformB> ;
+	:map [
+		a :Cell ; 
+		:measure "1.0"^^xsd:float ; 
+		:relation "Equivalence" ;
+		:entity1 plA:hasColor ;
+		:entity2 plB:colour 
+	] .
+	
+<http://www.example.com/ontology/platformA>
+  a :Ontology ;
+  :formalism [
+    a :Formalism ;
+    :uri "http://www.w3.org/TR/owl-guide/" ;
+    :name "owl"
+  ] .
+  
+<http://www.example.com/ontology/platformB>
+  a :Ontology ;
+  :formalism [
+    a :Formalism ;
+    :uri "http://www.w3.org/TR/owl-guide/" ;
+    :name "owl"
+  ] .
